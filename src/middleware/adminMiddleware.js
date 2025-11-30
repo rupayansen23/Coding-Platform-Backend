@@ -26,6 +26,7 @@ const adminMiddleware = async (req, resp, next)=>{
             throw new Error("Invalid Token Hii");
         }
         // req.result = result;
+        req.user = user;
         next();
     }
     catch(error) {

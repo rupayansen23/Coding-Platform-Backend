@@ -29,9 +29,10 @@ const submitBatch = async (submissionsArr)=>{
     async function fetchData() {
         try {
             const response = await axios.request(options);
-            console.log(response.data);
+            return response.data;
         } catch (error) {
             console.error(error);
+            throw error;
         }
     }
     return await fetchData();
@@ -61,7 +62,6 @@ const submitToken = async (resultToken)=>{
     async function fetchData() {
         try {
             const response = await axios.request(options);
-            //console.log(response.data);
             return response.data;
         } catch (error) {
             console.error(error.message);

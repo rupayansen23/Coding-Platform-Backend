@@ -23,6 +23,7 @@ const userMiddleWare = async (req, resp, next)=>{
             throw new Error("Invalid Token Hii");
         }
         
+        req.user = user;
         next();
     }
     catch(err) {

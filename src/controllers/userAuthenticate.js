@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const register = async (req, resp) =>{
-    console.log("hii");
+
     try{
         validate(req.body);
         const {firstName, lastName, emailId, password} = req.body;
